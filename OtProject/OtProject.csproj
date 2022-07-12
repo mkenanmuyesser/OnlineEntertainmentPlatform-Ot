@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1809A753-095A-4053-9596-E708D1F631CC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OtProject</RootNamespace>
+    <AssemblyName>OtProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Data.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.2.resources, Version=11.2.0.0, Culture=es, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Data.v11.2.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxEditors.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.2.resources, Version=11.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxEditors.v11.2.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v11.2.resources, Version=11.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.v11.2.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI, Version=2012.2.912.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2012.2.912.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Develops\images\otapoka-logo.png" />
+    <Content Include="packages.config" />
+    <Content Include="WallMain.Master" />
+    <Content Include="Main.Master" />
+    <Content Include="Develops\fonts\BenchNine-Regular.ttf" />
+    <Content Include="Develops\fonts\SourceSansPro-Regular.ttf" />
+    <Content Include="Develops\fonts\TitilliumWeb-Regular.ttf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadUploadTemp\empty.txt" />
+    <Content Include="ChangePassword.htm" />
+    <Content Include="Default.aspx" />
+    <Content Include="Develops\css\front.css" />
+    <Content Include="Develops\files\jquery-1.8.3.js" />
+    <Content Include="Develops\icons\search-logo.gif" />
+    <Content Include="Develops\images\boy.jpg" />
+    <Content Include="Develops\images\girl.jpg" />
+    <Content Include="Develops\images\member-logo.jpg" />
+    <Content Include="Develops\images\vs-b.jpg" />
+    <Content Include="dummy.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="NewUserPage.aspx" />
+    <Content Include="OtProjectService.asmx" />
+    <Content Include="RecoveryPasswordPage.aspx" />
+    <Content Include="SearchPage.aspx" />
+    <Content Include="SettingsPage.aspx" />
+    <Content Include="UploadImages\1.png" />
+    <Content Include="UploadImages\2.png" />
+    <Content Include="UploadImages\3.png" />
+    <Content Include="Develops\icons\bank-g.png" />
+    <Content Include="Develops\icons\bank.png" />
+    <Content Include="Develops\icons\block-g.png" />
+    <Content Include="Develops\icons\block.png" />
+    <Content Include="Develops\icons\calculator-g.png" />
+    <Content Include="Develops\icons\calculator.png" />
+    <Content Include="Develops\icons\comment-g.png" />
+    <Content Include="Develops\icons\comment-remove-icon.png" />
+    <Content Include="Develops\icons\comment.png" />
+    <Content Include="Develops\icons\corp-g.png" />
+    <Content Include="Develops\icons\corp.png" />
+    <Content Include="Develops\icons\delete-g.png" />
+    <Content Include="Develops\icons\delete.png" />
+    <Content Include="Develops\icons\dislike-g.png" />
+    <Content Include="Develops\icons\dislike.png" />
+    <Content Include="Develops\icons\facebook-icon.png" />
+    <Content Include="Develops\icons\follow-g.png" />
+    <Content Include="Develops\icons\follow.png" />
+    <Content Include="Develops\icons\google-plus-icon.png" />
+    <Content Include="Develops\icons\green-chart-icon.png" />
+    <Content Include="Develops\icons\green-mail-icon.png" />
+    <Content Include="Develops\icons\group-g.png" />
+    <Content Include="Develops\icons\group.png" />
+    <Content Include="Develops\icons\header.png" />
+    <Content Include="Develops\icons\heart-break-g.png" />
+    <Content Include="Develops\icons\heart-break.png" />
+    <Content Include="Develops\icons\heart-g.png" />
+    <Content Include="Develops\icons\heart.png" />
+    <Content Include="Develops\icons\like-g.png" />
+    <Content Include="Develops\icons\like.png" />
+    <Content Include="Develops\icons\loan-g.png" />
+    <Content Include="Develops\icons\loan.png" />
+    <Content Include="Develops\icons\lock-g.png" />
+    <Content Include="Develops\icons\lock.png" />
+    <Content Include="Develops\icons\mail-g.png" />
+    <Content Include="Develops\icons\mail.png" />
+    <Content Include="Develops\icons\member1.png" />
+    <Content Include="Develops\icons\member2.png" />
+    <Content Include="Develops\icons\member3.png" />
+    <Content Include="Develops\icons\member4.png" />
+    <Content Include="Develops\icons\money-g.png" />
+    <Content Include="Develops\icons\newnews.png" />
+    <Content Include="Develops\icons\newspaperpng.png" />
+    <Content Include="Develops\icons\otapoka-logo-kucuk.png" />
+    <Content Include="Develops\icons\otapoka-logo.png" />
+    <Content Include="Develops\icons\otapoka_desk.png" />
+    <Content Include="Develops\icons\otapoka_top_logo.png" />
+    <Content Include="Develops\icons\otapoka_top_logo2.png" />
+    <Content Include="Develops\icons\photo-g.png" />
+    <Content Include="Develops\icons\photo.png" />
+    <Content Include="Develops\icons\questions-g.png" />
+    <Content Include="Develops\icons\questions.png" />
+    <Content Include="Develops\icons\real-g.png" />
+    <Content Include="Develops\icons\real.png" />
+    <Content Include="Develops\icons\red-g.png" />
+    <Content Include="Develops\icons\red.png" />
+    <Content Include="Develops\icons\report-g.png" />
+    <Content Include="Develops\icons\report.png" />
+    <Content Include="Develops\icons\search-logo.png" />
+    <Content Include="Develops\icons\share-g.png" />
+    <Content Include="Develops\icons\share.png" />
+    <Content Include="Develops\icons\survey-g.png" />
+    <Content Include="Develops\icons\survey.png" />
+    <Content Include="Develops\icons\ticket-small-icon.png" />
+    <Content Include="Develops\icons\time-g.png" />
+    <Content Include="Develops\icons\time-icon.png" />
+    <Content Include="Develops\icons\time.png" />
+    <Content Include="Develops\icons\top-comment.png" />
+    <Content Include="Develops\icons\top-label.png" />
+    <Content Include="Develops\icons\twitter-icon.png" />
+    <Content Include="Develops\icons\video-g.png" />
+    <Content Include="Develops\icons\video.png" />
+    <Content Include="Develops\icons\virtual-g.png" />
+    <Content Include="Develops\icons\virtual.png" />
+    <Content Include="Develops\icons\Vs_icon.png" />
+    <Content Include="Develops\icons\Web-Gmail-alt-Metro-icon.png" />
+    <Content Include="Develops\icons\Web-Live-Hotmail-Metro-icon.png" />
+    <Content Include="Develops\icons\Web-Twitter-alt-2-Metro-icon.png" />
+    <Content Include="Develops\icons\Web-Yahoo-alt-1-Metro-icon.png" />
+    <Content Include="Develops\icons\yen-coins-icon.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Popups\AddInterestWindow.aspx" />
+    <Content Include="Popups\AssignRefereeWindow.aspx" />
+    <Content Include="Popups\CreateClaimWindow.aspx" />
+    <Content Include="Popups\CreateGroupWindow.aspx" />
+    <Content Include="Popups\CreateQuestionWindow.aspx" />
+    <Content Include="Popups\CreateSurveyWindow.aspx" />
+    <Content Include="Popups\MyProfileWindow.aspx" />
+    <Content Include="Popups\ReportWindow.aspx" />
+    <Content Include="Popups\SendMessageWindow.aspx" />
+    <Content Include="Popups\ShareWindow.aspx" />
+    <Content Include="Popups\TakeMoneyWindow.aspx" />
+    <Content Include="Popups\WelcomeWindow.aspx" />
+    <Content Include="UserControls\MainGroup\FooterControl.ascx" />
+    <Content Include="UserControls\MainGroup\MainSearchControl.ascx" />
+    <Content Include="UserControls\MainGroup\MainSearchMenuControl.ascx" />
+    <Content Include="UserControls\MainGroup\UserLoginControl.ascx" />
+    <Content Include="UserControls\NewUserGroup\NewUserStep1Control.ascx" />
+    <Content Include="UserControls\NewUserGroup\NewUserStep2Control.ascx" />
+    <Content Include="UserControls\NewUserGroup\NewUserStep3Control.ascx" />
+    <Content Include="UserControls\NewUserGroup\NewUserStep4Control.ascx" />
+    <Content Include="UserControls\WallGroup\ClaimCommentsControl.ascx" />
+    <Content Include="UserControls\WallGroup\ClaimDoCommentControl.ascx" />
+    <Content Include="UserControls\WallGroup\GroupControl.ascx" />
+    <Content Include="UserControls\WallGroup\QuestionControl.ascx" />
+    <Content Include="UserControls\WallGroup\StateControl.ascx" />
+    <Content Include="UserControls\WallGroup\SurveyControl.ascx" />
+    <Content Include="UserControls\WallGroup\UserSettingsControl.ascx" />
+    <Content Include="UserControls\WallGroup\WallLeftControl.ascx" />
+    <Content Include="UserControls\WallGroup\WallMiddleControl.ascx" />
+    <Content Include="UserControls\WallGroup\WallTopControl.ascx" />
+    <Content Include="UserControls\WallGroup\WithOpponentClaimControl.ascx" />
+    <Content Include="UserControls\WallGroup\WithoutOpponentClaimControl.ascx" />
+    <Content Include="UserControls\MainGroup\WithoutSearchHeaderControl.ascx" />
+    <Content Include="UserControls\WallGroup\WithSearchHeaderControl.ascx" />
+    <Content Include="WallPage.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Windows\Grp.aspx" />
+    <Content Include="Windows\Que.aspx" />
+    <Content Include="Windows\RVC.aspx" />
+    <Content Include="Windows\Sur.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Crypto.cs" />
+    <Compile Include="Classes\Entities.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dummy.aspx.cs">
+      <DependentUpon>dummy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dummy.aspx.designer.cs">
+      <DependentUpon>dummy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NewUserPage.aspx.cs">
+      <DependentUpon>NewUserPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewUserPage.aspx.designer.cs">
+      <DependentUpon>NewUserPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OtProjectService.asmx.cs">
+      <DependentUpon>OtProjectService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Popups\AddInterestWindow.aspx.cs">
+      <DependentUpon>AddInterestWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\AddInterestWindow.aspx.designer.cs">
+      <DependentUpon>AddInterestWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\AssignRefereeWindow.aspx.cs">
+      <DependentUpon>AssignRefereeWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\AssignRefereeWindow.aspx.designer.cs">
+      <DependentUpon>AssignRefereeWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\CreateClaimWindow.aspx.cs">
+      <DependentUpon>CreateClaimWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\CreateClaimWindow.aspx.designer.cs">
+      <DependentUpon>CreateClaimWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\CreateGroupWindow.aspx.cs">
+      <DependentUpon>CreateGroupWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\CreateGroupWindow.aspx.designer.cs">
+      <DependentUpon>CreateGroupWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\CreateQuestionWindow.aspx.cs">
+      <DependentUpon>CreateQuestionWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\CreateQuestionWindow.aspx.designer.cs">
+      <DependentUpon>CreateQuestionWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\CreateSurveyWindow.aspx.cs">
+      <DependentUpon>CreateSurveyWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\CreateSurveyWindow.aspx.designer.cs">
+      <DependentUpon>CreateSurveyWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\MyProfileWindow.aspx.cs">
+      <DependentUpon>MyProfileWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\MyProfileWindow.aspx.designer.cs">
+      <DependentUpon>MyProfileWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\ReportWindow.aspx.cs">
+      <DependentUpon>ReportWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\ReportWindow.aspx.designer.cs">
+      <DependentUpon>ReportWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\SendMessageWindow.aspx.cs">
+      <DependentUpon>SendMessageWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\SendMessageWindow.aspx.designer.cs">
+      <DependentUpon>SendMessageWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\ShareWindow.aspx.cs">
+      <DependentUpon>ShareWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\ShareWindow.aspx.designer.cs">
+      <DependentUpon>ShareWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\TakeMoneyWindow.aspx.cs">
+      <DependentUpon>TakeMoneyWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\TakeMoneyWindow.aspx.designer.cs">
+      <DependentUpon>TakeMoneyWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\WelcomeWindow.aspx.cs">
+      <DependentUpon>WelcomeWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popups\WelcomeWindow.aspx.designer.cs">
+      <DependentUpon>WelcomeWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecoveryPasswordPage.aspx.cs">
+      <DependentUpon>RecoveryPasswordPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecoveryPasswordPage.aspx.designer.cs">
+      <DependentUpon>RecoveryPasswordPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPage.aspx.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchPage.aspx.designer.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsPage.aspx.cs">
+      <DependentUpon>SettingsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SettingsPage.aspx.designer.cs">
+      <DependentUpon>SettingsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainGroup\FooterControl.ascx.cs">
+      <DependentUpon>FooterControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainGroup\FooterControl.ascx.designer.cs">
+      <DependentUpon>FooterControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainGroup\MainSearchControl.ascx.cs">
+      <DependentUpon>MainSearchControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainGroup\MainSearchControl.ascx.designer.cs">
+      <DependentUpon>MainSearchControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainGroup\MainSearchMenuControl.ascx.cs">
+      <DependentUpon>MainSearchMenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainGroup\MainSearchMenuControl.ascx.designer.cs">
+      <DependentUpon>MainSearchMenuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainGroup\UserLoginControl.ascx.cs">
+      <DependentUpon>UserLoginControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainGroup\UserLoginControl.ascx.designer.cs">
+      <DependentUpon>UserLoginControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NewUserGroup\NewUserStep1Control.ascx.cs">
+      <DependentUpon>NewUserStep1Control.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NewUserGroup\NewUserStep1Control.ascx.designer.cs">
+      <DependentUpon>NewUserStep1Control.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NewUserGroup\NewUserStep2Control.ascx.cs">
+      <DependentUpon>NewUserStep2Control.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NewUserGroup\NewUserStep2Control.ascx.designer.cs">
+      <DependentUpon>NewUserStep2Control.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NewUserGroup\NewUserStep3Control.ascx.cs">
+      <DependentUpon>NewUserStep3Control.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NewUserGroup\NewUserStep3Control.ascx.designer.cs">
+      <DependentUpon>NewUserStep3Control.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NewUserGroup\NewUserStep4Control.ascx.cs">
+      <DependentUpon>NewUserStep4Control.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NewUserGroup\NewUserStep4Control.ascx.designer.cs">
+      <DependentUpon>NewUserStep4Control.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\ClaimCommentsControl.ascx.cs">
+      <DependentUpon>ClaimCommentsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\ClaimCommentsControl.ascx.designer.cs">
+      <DependentUpon>ClaimCommentsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\ClaimDoCommentControl.ascx.cs">
+      <DependentUpon>ClaimDoCommentControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\ClaimDoCommentControl.ascx.designer.cs">
+      <DependentUpon>ClaimDoCommentControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\GroupControl.ascx.cs">
+      <DependentUpon>GroupControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\GroupControl.ascx.designer.cs">
+      <DependentUpon>GroupControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\QuestionControl.ascx.cs">
+      <DependentUpon>QuestionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\QuestionControl.ascx.designer.cs">
+      <DependentUpon>QuestionControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\StateControl.ascx.cs">
+      <DependentUpon>StateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\StateControl.ascx.designer.cs">
+      <DependentUpon>StateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\SurveyControl.ascx.cs">
+      <DependentUpon>SurveyControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\SurveyControl.ascx.designer.cs">
+      <DependentUpon>SurveyControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\UserSettingsControl.ascx.cs">
+      <DependentUpon>UserSettingsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\UserSettingsControl.ascx.designer.cs">
+      <DependentUpon>UserSettingsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WallLeftControl.ascx.cs">
+      <DependentUpon>WallLeftControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WallLeftControl.ascx.designer.cs">
+      <DependentUpon>WallLeftControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WallMiddleControl.ascx.cs">
+      <DependentUpon>WallMiddleControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WallMiddleControl.ascx.designer.cs">
+      <DependentUpon>WallMiddleControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WallTopControl.ascx.cs">
+      <DependentUpon>WallTopControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WallTopControl.ascx.designer.cs">
+      <DependentUpon>WallTopControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WithOpponentClaimControl.ascx.cs">
+      <DependentUpon>WithOpponentClaimControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WithOpponentClaimControl.ascx.designer.cs">
+      <DependentUpon>WithOpponentClaimControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WithoutOpponentClaimControl.ascx.cs">
+      <DependentUpon>WithoutOpponentClaimControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WithoutOpponentClaimControl.ascx.designer.cs">
+      <DependentUpon>WithoutOpponentClaimControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainGroup\WithoutSearchHeaderControl.ascx.cs">
+      <DependentUpon>WithoutSearchHeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainGroup\WithoutSearchHeaderControl.ascx.designer.cs">
+      <DependentUpon>WithoutSearchHeaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WithSearchHeaderControl.ascx.cs">
+      <DependentUpon>WithSearchHeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WallGroup\WithSearchHeaderControl.ascx.designer.cs">
+      <DependentUpon>WithSearchHeaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\WallData.cs" />
+    <Compile Include="WallMain.Master.cs">
+      <DependentUpon>WallMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WallMain.Master.designer.cs">
+      <DependentUpon>WallMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WallPage.aspx.cs">
+      <DependentUpon>WallPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WallPage.aspx.designer.cs">
+      <DependentUpon>WallPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Grp.aspx.cs">
+      <DependentUpon>Grp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Windows\Grp.aspx.designer.cs">
+      <DependentUpon>Grp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Que.aspx.cs">
+      <DependentUpon>Que.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Windows\Que.aspx.designer.cs">
+      <DependentUpon>Que.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RVC.aspx.cs">
+      <DependentUpon>RVC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Windows\RVC.aspx.designer.cs">
+      <DependentUpon>RVC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Sur.aspx.cs">
+      <DependentUpon>Sur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Windows\Sur.aspx.designer.cs">
+      <DependentUpon>Sur.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61783</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61783/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

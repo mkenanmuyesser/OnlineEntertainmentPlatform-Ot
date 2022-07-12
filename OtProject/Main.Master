@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.Master.cs" Inherits="OtProject.Ana" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Src="UserControls/MainGroup/FooterControl.ascx" TagName="FooterControl"
+    TagPrefix="uc1" %>
+<%@ Register Src="UserControls/MainGroup/WithoutSearchHeaderControl.ascx" TagName="WithoutSearchHeaderControl"
+    TagPrefix="uc2" %>
+    <%@ Register Src="UserControls/MainGroup/UserLoginControl.ascx" TagName="UserLoginControl"
+    TagPrefix="uc3" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Otapoka - Dünyanın İlk İddia Arama Motoru</title>
+    <link href="Develops/css/front.css" rel="stylesheet" type="text/css" />
+    <meta content="otapoka,otaboka,poka,parapuan,iddia,etkinlik,arkadaşlık,ödül kazanma,ödül,iddia tüyoları,tüyo,iddia arama motoru,arama motoru,arama,yeni sosyal medya,"
+        description="Dünyanın ilk ve tek iddia arama ve etkinlik sitesi." />
+    <style type="text/css">
+        @font-face
+        {
+            font-family: "BenchNine";
+            src: url(Develops/fonts/BenchNine-Regular.ttf);
+        }
+        body
+        {
+            margin: 0px;
+            font-size: 14px;
+            font-family: Arial;
+        }
+        html, body, form, #main
+        {
+            height: 100%;
+        }
+        form > #main
+        {
+            height: auto;
+            min-height: 100%;
+        }
+        #main
+        {
+            width: 100%;
+            margin: auto;
+        }
+        #footer
+        {
+            clear: both;
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            margin: auto;
+            bottom: 0px;
+            height: 10px;
+            position: relative;
+            margin-top: -33px;
+            height: 30px;
+            clear: both;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <telerik:radscriptmanager id="RadScriptManager1" runat="server">
+    </telerik:radscriptmanager>
+    <div id="main">
+        <div id="headerpart1">
+            <uc2:withoutsearchheadercontrol id="WithoutSearchHeaderControl1" runat="server" />
+        </div>
+        <div id="headerpart2">
+            <div id="container" style="float: right; margin-right: 50px;">
+                <asp:LoginView ID="lgnView" runat="server">
+                    <AnonymousTemplate>
+                        <uc3:userlogincontrol id="lgnControl" runat="server" />
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <span style="float: right; width: 200px">
+                            <telerik:radtooltip id="loginToolTip" runat="server" position="BottomCenter" skin="Transparent"
+                                targetcontrolid="lgnName" showevent="OnClick" autoclosedelay="0" borderstyle="Solid" Width="310" EnableAriaSupport="false" EnableShadow="false" Modal="false">
+                        <div style="width: 310px; height: 80px; padding: 5px; border: 2px solid black;">
+                            <div style="width: 310px; height: 80px;">
+                                <table style="width: 100%; height: 100%;">
+                                    <tr>
+                                        <td>
+                                            &nbsp;&nbsp;<asp:Label ID="lblUserName" runat="server"> <asp:LoginName ID="LoginName1" runat="server" /></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            &nbsp;&nbsp;<telerik:RadButton ID="btnWall" runat="server" Width="80" Skin="Hay"
+                                                Text="Duvarına Git" ButtonType="LinkButton">
+                                            </telerik:RadButton>
+                                            &nbsp;&nbsp;<telerik:RadButton ID="btnSettings" runat="server" Width="80" Skin="Hay"
+                                                Text="Düzenle" ButtonType="LinkButton">
+                                            </telerik:RadButton>
+                                            &nbsp;&nbsp;
+                                            <telerik:RadButton ID="btnSignOut" runat="server" Width="80" Skin="Hay" Text="Çıkış Yap"
+                                                OnClick="btnSignOut_Click" ButtonType="LinkButton">
+                                            </telerik:RadButton>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </telerik:radtooltip>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <telerik:radbinaryimage id="imgTopUser" runat="server" width="40" height="40" imageurl="UploadImages/1.png" />
+                                    </td>
+                                    <td style="font-size: 14px;">
+                                        <a style="float: left;text-decoration:underline;color:Black;" href="#">
+                                            <asp:LoginName ID="lgnName" runat="server" />
+                                        </a>&nbsp;&nbsp;
+                                        <asp:Label ID="lblCity" runat="server" Text="Label" CssClass="citylblclass"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </span>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <asp:ContentPlaceHolder ID="topcontent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:ContentPlaceHolder ID="middlecontent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer">
+        <asp:ContentPlaceHolder ID="footercontent" runat="server">
+        </asp:ContentPlaceHolder>
+        <uc1:footercontrol id="FooterControl1" runat="server" />
+    </div>
+    </form>
+</body>
+</html>
